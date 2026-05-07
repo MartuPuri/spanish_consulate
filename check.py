@@ -62,8 +62,9 @@ def send_notification():
             "Title": "Consulate appointment available!",
             "Priority": "urgent",
             "Tags": "passport,es,rotating_light",
+            "Click": URL,
         },
-        data="Appointment slots are open at the Spanish Consulate in Miami for Primer Pasaporte. Book now!",
+        data=f"Appointment slots are open at the Spanish Consulate in Miami for Primer Pasaporte. Book now!\n\n{URL}",
         timeout=15,
     )
     if response.ok:
